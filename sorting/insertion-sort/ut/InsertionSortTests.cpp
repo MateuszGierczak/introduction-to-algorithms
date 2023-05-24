@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
+#include <vector>
 #include "insertion_sort.hpp"
 
 using namespace ::testing;
