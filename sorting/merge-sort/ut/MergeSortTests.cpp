@@ -5,9 +5,16 @@
 
 using namespace ::testing;
 
-TEST(MergeSortTests, shouldMergeSortedSubArrays)
+TEST(MergeWithGuardsTests, shouldMergeSortedSubArrays)
 {
     std::vector<int> vec {2, 4, 5, 7, 1, 2, 3, 6};
     merge_guards(vec, 0, 3, 7);
+    EXPECT_THAT(vec, ElementsAre(1, 2, 2, 3, 4, 5, 6, 7));
+}
+
+TEST(MergeWithoutGuardsTests, shouldMergeSortedSubArrays)
+{
+    std::vector<int> vec {2, 4, 5, 7, 1, 2, 3, 6};
+    merge(vec, 0, 3, 7);
     EXPECT_THAT(vec, ElementsAre(1, 2, 2, 3, 4, 5, 6, 7));
 }
