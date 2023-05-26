@@ -12,3 +12,4 @@ project(introduction-to-algorithm CXX)
 find_package(GTest REQUIRED)
 
 add_subdirectory(sorting)
+add_subdirectory(searching)
